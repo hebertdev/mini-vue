@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <span p-text="message"></span>
+        <br>
+        <input type="text" p-model="message">
+        <br>
+        <input type="text" p-model="message">
+        <br>
+
+        <img p-bind:src="image" p-bind:id="imageId">
+        
+    </div>
+
+    <script src="./mini-vue.js"></script>
+    
+    <script>
+
+        const { createApp } = hebertdev;
+
+        const app = createApp({
+
+            data() {
+                return {
+                    message: "Hola Vue", 
+                    image: "https://avatars2.githubusercontent.com/u/31359121?s=460&u=41919ad38afaa450f460898b407b48e30ac1b83b&v=4",
+                    imageId: "myId"
+                }
+            },
+        });
+
+        app.mount("#app");
+
+    </script>
+    
+</body>
+</html>
